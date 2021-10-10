@@ -1,0 +1,1174 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+    <title align="center">Number System Website</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            background-image: url('1.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+
+
+        }
+
+        /*linear-gradient(90deg, rgba(255,48,222,1) 17%, rgba(170,68,205,1) 50%, rgba(51,113,219,1) 84%); */
+
+        .box div {
+
+            position: absolute;
+
+            width: 60px;
+
+            height: 60px;
+
+            background-color: transparent;
+
+            border: 6px solid rgba(255, 255, 255, 0.8);
+
+        }
+
+        .box div:nth-child(1) {
+
+            top: 12%;
+
+            left: 42%;
+
+            animation: animate 10s linear infinite;
+
+        }
+
+        .box div:nth-child(2) {
+
+            top: 70%;
+
+            left: 50%;
+
+            animation: animate 9s linear infinite;
+
+        }
+
+        .box div:nth-child(3) {
+
+            top: 17%;
+
+            left: 6%;
+
+            animation: animate 15s linear infinite;
+
+        }
+
+        .box div:nth-child(4) {
+
+            top: 20%;
+
+            left: 60%;
+
+            animation: animate 9s linear infinite;
+
+        }
+
+        .box div:nth-child(5) {
+
+            top: 67%;
+
+            left: 10%;
+
+            animation: animate 14s linear infinite;
+
+        }
+
+        .box div:nth-child(6) {
+
+            top: 80%;
+
+            left: 70%;
+
+            animation: animate 13s linear infinite;
+
+        }
+
+        .box div:nth-child(7) {
+
+            top: 60%;
+
+            left: 80%;
+
+            animation: animate 14s linear infinite;
+
+        }
+
+        .box div:nth-child(8) {
+
+            top: 32%;
+
+            left: 70%;
+
+            animation: animate 12s linear infinite;
+
+        }
+
+        .box div:nth-child(9) {
+
+            top: 90%;
+
+            left: 25%;
+
+            animation: animate 10s linear infinite;
+
+        }
+
+        .box div:nth-child(10) {
+
+            top: 20%;
+
+            left: 80%;
+
+            animation: animate 13s linear infinite;
+
+        }
+
+        @keyframes animate {
+
+            0% {
+
+                transform: scale(0) translateY(0) rotate(0);
+
+                opacity: 1;
+
+            }
+
+            100% {
+
+                transform: scale(1.3) translateY(-90px) rotate(360deg);
+
+                opacity: 0;
+
+            }
+
+        }
+
+        .modal {
+
+            background-color: rgba(255, 255, 255, 0.95);
+
+            border-radius: 5px;
+
+            color: #333;
+
+            font-family: sans-serif;
+
+            line-height: 1.5;
+
+            max-width: 50%;
+
+            padding: 1rem 2rem;
+
+
+
+        }
+
+        @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+
+            .modal {
+
+                -webkit-backdrop-filter: blur(50px);
+
+                backdrop-filter: blur(45px);
+
+                background: rgb(64, 64, 74);
+                background: linear-gradient(90deg, rgba(64, 64, 74, 1) 3%, rgba(203, 203, 205, 1) 56%, rgba(154, 221, 233, 1) 100%);
+            }
+
+            .warning {
+
+                display: none;
+
+            }
+
+            .container {
+
+                align-items: center;
+
+                display: flex;
+
+                justify-content: center;
+
+                height: 100%;
+
+                width: 100%;
+
+            }
+
+            input[type=text] {
+
+                width: 55%;
+
+                border: 2px solid #aaa;
+
+                border-radius: 6px;
+
+                margin: 10px 0;
+
+                outline: none;
+
+                padding: 10px;
+
+                box-sizing: border-box;
+
+                transition: .3s;
+
+            }
+
+            input[type=text]:focus {
+
+                border-color: dodgerBlue;
+
+                box-shadow: 0 0 8px 0 dodgerBlue;
+
+            }
+
+            h3 {
+                margin-left: 55px;
+            }
+
+            textarea:focus {
+
+                background: none repeat scroll 0 0 #FFFFFF;
+
+                outline-width: 0;
+
+            }
+
+            .para {
+
+                margin-top: 10px;
+
+                margin-left: 50px;
+
+            }
+
+            .inbox1 {
+
+                margin-left: 50px;
+
+            }
+
+            .inbox2 {
+
+                margin-left: 70px;
+
+            }
+
+            .commentblur {
+
+                align-items: left;
+
+                display: flex;
+
+                justify-content: left;
+
+                height: 100%;
+
+                width: 100%;
+
+            }
+
+            select {
+
+                width: 150px;
+
+                height: 35px;
+
+                font-size: 18px;
+
+                border: 2px solid #aaa;
+
+                cursor: pointer;
+
+                appearance: none;
+
+                -webkit-appearance: none;
+
+                outline: none;
+
+                padding: 0 10px;
+
+            }
+
+            select::-ms-expand {
+
+                display: none;
+
+            }
+
+            .icon_arrow {
+
+                border-top: 15px solid tomato;
+
+                border-left: 10px solid transparent;
+
+                border-right: 10px solid transparent;
+
+                position: absolute;
+
+                right: 10px;
+
+                top: 50%;
+
+                margin-top: -7px;
+
+            }
+
+            /*custom radio*/
+
+            .radio-toolbar {
+
+                margin: 10px;
+
+            }
+
+            .radio-toolbar input[type="radio"] {
+
+                opacity: 0;
+
+                position: fixed;
+
+                width: 0;
+
+            }
+
+            .radio-toolbar label {
+
+                display: inline-block;
+
+                background-color: #ddd;
+
+                padding: 10px 25px;
+
+                font-family: sans-serif, Arial;
+
+                font-size: 16px;
+
+                border: 2px solid #444;
+
+                border-radius: 5px;
+
+            }
+
+            .radio-toolbar label:hover {
+
+                background-color: #dfd;
+
+            }
+
+            .radio-toolbar input[type="radio"]:focus+label {
+
+                border: 2px dashed #444;
+
+            }
+
+            .radio-toolbar input[type="radio"]:checked+label {
+
+                background-color: #bfb;
+
+                border-color: #4c4;
+
+            }
+    </style>
+
+    <script>(function (w, d) { w.CollectId = "6097cf6317795f66ab8fee85"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.async = true; s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>
+
+</head>
+
+<div class="wrapper" </div>
+
+    <div class="box">
+
+        <div></div>
+
+        <div></div>
+
+        <div></div>
+
+        <div></div>
+
+        <div></div>
+
+        <div></div>
+
+        <div></div>
+
+        <div></div>
+
+        <div></div>
+
+        <div></div>
+
+    </div>
+
+    <div id="fb-root"></div>
+
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/mr_IN/sdk.js#xfbml=1&version=v12.0"
+        nonce="Rq4eE4fP"></script>
+
+    <body <br>
+
+        <br>
+
+        <table>
+
+            <tr>
+                <td>
+
+                    <img src="https://imgur.com/HJiGs4h.png" alt="NWC" height="650" />
+
+                </td>
+
+                <td>
+                    <p style="font-size: 50px;font-family: 'Comic Sans MS', cursive, sans-serif; color: #FFFFFF">Number
+                        rules the universe.</p>
+                </td>
+            </tr>
+
+        </table>
+
+        <h1
+            style="text-align: center; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; color: #FFFFFF">
+            Number Conversion</h1>
+
+        <div class="container">
+
+            <div class="modal">
+
+                <div class="radio-toolbar">
+
+                    <font size="5" face="Courier New" style="font-weight: bold">
+
+                        <p> Select Base </p>
+                    </font>
+
+                    <input type="radio" id="radioApple" name='input_' value="2">
+
+                    <label for="radioApple">Binary </label>
+
+                    <input type="radio" id="radioBanana" name='input_' value="8">
+
+                    <label for="radioBanana">Octal</label>
+
+                    <input type="radio" id="radioOrange" name='input_' value="10">
+
+                    <label for="radioOrange">Decimal</label>
+
+                    <input type="radio" id="radioHexa" name='input_' value="16">
+
+                    <label for="radioHexa">Hexadecimal</label>
+
+                    <select id="input_num" class="form-control" style="font-size: 16px">
+
+                        <option value="2">Binary</option>
+
+                        <option value="3">Base-3</option>
+
+                        <option value="4">Base-4</option>
+
+                        <option value="5">Base-5</option>
+
+                        <option value="6">Base-6</option>
+
+                        <option value="7">Base-7</option>
+
+                        <option value="8">Octal</option>
+
+                        <option value="9">Base-9</option>
+
+                        <option value="10">Decimal</option>
+
+                        <option value="11">Base-11</option>
+
+                        <option value="12">Base-12</option>
+
+                        <option value="13">Base-13</option>
+
+                        <option value="14">Base-14</option>
+
+                        <option value="15">Base-15</option>
+
+                        <option value="16">Hexadecimal</option>
+
+                        <option value="17">Base-17</option>
+
+                        <option value="18">Base-18</option>
+
+                        <option value="19">Base-19</option>
+
+                        <option value="20">Base-20</option>
+
+                        <option value="21">Base-21</option>
+
+                        <option value="22">Base-22</option>
+
+                        <option value="23">Base-23</option>
+
+                        <option value="24">Base-24</option>
+
+                        <option value="25">Base-25</option>
+
+                        <option value="26">Base-26</option>
+
+                        <option value="27">Base-27</option>
+
+                        <option value="28">Base-28</option>
+
+                        <option value="29">Base-29</option>
+
+                        <option value="30">Base-30</option>
+
+                        <option value="31">Base-31</option>
+
+                        <option value="32">Base-32</option>
+
+                        <option value="33">Base-33</option>
+
+                        <option value="34">Base-34</option>
+
+                        <option value="35">Base-35</option>
+
+                        <option value="36">Base-36</option>
+
+                    </select>
+
+                </div>
+
+                <div class="inbox1">
+                    <p style="text-align: center">From: <input id="input_value" type="text" value=""
+                            onpropertychange="px()" onchange="px()" oninput="px()" class="form-control"
+                            placeholder="Input" style="font-size: medium; color: #DB0000""></p> </div>
+ 
+                                        <div class=" radio-toolbar">
+
+                        <font size="5" face="Courier New" style="font-weight: bold">
+
+                            <p> Select Base </p>
+                        </font>
+
+                        <input type="radio" id="radiobinary2" name='output_' value="2" />
+
+                        <label for="radiobinary2">Binary </label>
+
+                        <input type="radio" id="radiooctal2" name='output_' value="8" />
+
+                        <label for="radiooctal2">Octal </label>
+
+                        <input type="radio" id="radiodecimal2" name='output_' value="10" />
+
+                        <label for="radiodecimal2">Decimal </label>
+
+                        <input type="radio" id="radiohexa2" name='output_' value="16" />
+
+                        <label for="radiohexa2">Hexadecimal </label>
+
+                        <select id="output_num" onchange="px(1);" class="form-control" style="font-size: 16px">
+
+                            <option value="2">Binary</option>
+
+                            <option value="3">Base-3</option>
+
+                            <option value="4">Base-4</option>
+
+                            <option value="5">Base-5</option>
+
+                            <option value="6">Base-6</option>
+
+                            <option value="7">Base-7</option>
+
+                            <option value="8">Octal</option>
+
+                            <option value="9">Base-9</option>
+
+                            <option value="10">Decimal</option>
+
+                            <option value="11">Base-11</option>
+
+                            <option value="12">Base-12</option>
+
+                            <option value="13">Base-13</option>
+
+                            <option value="14">Base-14</option>
+
+                            <option value="15">Base-15</option>
+
+                            <option value="16">Hexadecimal</option>
+
+                            <option value="17">Base-17</option>
+
+                            <option value="18">Base-18</option>
+
+                            <option value="19">Base-19</option>
+
+                            <option value="20">Base-20</option>
+
+                            <option value="21">Base-21</option>
+
+                            <option value="22">Base-22</option>
+
+                            <option value="23">Base-23</option>
+
+                            <option value="24">Base-24</option>
+
+                            <option value="25">Base-25</option>
+
+                            <option value="26">Base-26</option>
+
+                            <option value="27">Base-27</option>
+
+                            <option value="28">Base-28</option>
+
+                            <option value="29">Base-29</option>
+
+                            <option value="30">Base-30</option>
+
+                            <option value="31">Base-31</option>
+
+                            <option value="32">Base-32</option>
+
+                            <option value="33">Base-33</option>
+
+                            <option value="34">Base-34</option>
+
+                            <option value="35">Base-35</option>
+
+                            <option value="36">Base-36</option>
+
+                        </select>
+
+                </div>
+
+                <div class="inbox2">
+                    <p style="text-align: center">To: <input type="text" id="output_value" class="form-control"
+                            placeholder="Result" style="font-size: medium; color: #17B30F"></input> </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <br> <br>
+
+        <br>
+        <h1
+            style="text-align: center; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; color: #FFFFFF">
+            Base Calculator</h1>
+
+        <div class="container">
+
+            <div class="modal">
+
+                <div class="radio-toolbar">
+
+                    <font size="5" face="Courier New" style="font-weight: bold">
+
+                        <table style="width:800px; ">
+
+                            <tbody>
+
+                                <tr>
+                                    <td></td>
+
+                                    <td>
+
+                                        <select id="base" style="font-size: 16px" class="form-control" name="base"
+                                            onchange="baseCal();">
+
+                                            <option>2 (binary)</option>
+
+                                            <option>3</option>
+
+                                            <option>4</option>
+
+                                            <option>5</option>
+
+                                            <option>6</option>
+
+                                            <option>7</option>
+
+                                            <option>8 (octal)</option>
+
+                                            <option>9</option>
+
+                                            <option selected>10 (decimal)</option>
+
+                                            <option>11</option>
+
+                                            <option>12</option>
+
+                                            <option>13</option>
+
+                                            <option>14</option>
+
+                                            <option>15</option>
+
+                                            <option>16 (hex)</option>
+
+                                            <option>17</option>
+
+                                            <option>18</option>
+
+                                            <option>19</option>
+
+                                            <option>20</option>
+
+                                            <option>21</option>
+
+                                            <option>22</option>
+
+                                            <option>23</option>
+
+                                            <option>24</option>
+
+                                            <option>25</option>
+
+                                            <option>26</option>
+
+                                            <option>27</option>
+
+                                            <option>28</option>
+
+                                            <option>29</option>
+
+                                            <option>30</option>
+
+                                            <option>31</option>
+
+                                            <option>32</option>
+
+                                            <option>33</option>
+
+                                            <option>34</option>
+
+                                            <option>35</option>
+
+                                            <option>36</option>
+
+                                        </select>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>First number:</td>
+
+                                    <td><input type="text" id="num1" value="" style="font-size: 16px" name="num1"
+                                            class="form-control" onkeyup="baseCal();"> </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td class="fwb">Select operation:</td>
+
+                                    <td>
+
+                                        <select id="operation" class="form-control" onchange="baseCal();">
+
+                                            <option>+</option>
+
+                                            <option>-</option>
+
+                                            <option>&times;</option>
+
+                                            <option>&div;</option>
+
+                                        </select>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td class="fwb">Second number:</td>
+
+                                    <td><input type="text" id="num2" value="" style="font-size: 16px" name="num2"
+                                            class="form-control" onkeyup="baseCal();"></td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td class="fwb">Result:</td>
+
+                                    <td><textarea rows="2" placeholder="Result will show here..."
+                                            style="font-size: 16px" id="res" class="form-control" readonly></textarea>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </font>
+
+                </div>
+
+            </div>
+        </div>
+
+        <br> <br>
+        <br> <br>
+
+        <div class="para">
+
+            <p style="font-family: 'Comic Sans MS', cursive, sans-serif; color: #F0F71E; font-size: 27px">
+
+                The number system is simply a system to represent or express numbers.<br>
+
+                There are various types of number systems and the most commonly used <br> ones are decimal number
+                system,
+
+                binary number system,<br> octal number system and hexadecimal number system. </p>
+
+        </div>
+
+        <br> <br>
+
+        <br><br>
+
+        <h3 style="color: #FFFFFF">Write Your Comments</h3>
+
+        <div class=para>
+
+            <div class="commentblur">
+
+                <div class="modal">
+
+                    <div class="fb-comments" <div class="fb-comments" data-href="http://127.0.0.1:5500/project.html"
+                        data-width="" data-numposts="6" data-width="500" data-colorscheme="light"></div>
+
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+
+        <P style="text-align: center; color: #FCFFFB"> Share On <br>
+
+            <a href="http://instagram.com/###?ref=badge"
+                https://pradeep12nov2001.github.io/SEM3miniprojectLTCE.github.io/ class="ig-b- ig-b-v-24"><img
+                    src="https://img.icons8.com/fluent/48/000000/instagram-new.png" alt="Instagram" />
+
+            </a>
+
+            <a href="http://www.facebook.com/sharer.php?u=https://pradeep12nov2001.github.io/SEM3miniprojectLTCE.github.io/"
+                target="_blank">
+
+                <img src="https://img.icons8.com/fluent/48/000000/facebook-new.png" alt="Facebook" />
+
+            </a>
+
+            <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://pradeep12nov2001.github.io/SEM3miniprojectLTCE.github.io/"
+                target="_blank">
+
+                <img src="https://img.icons8.com/fluent/48/000000/linkedin.png" alt="LinkedIn" />
+
+            </a>
+
+            <a href="https://twitter.com/share?url=https://pradeep12nov2001.github.io/SEM3miniprojectLTCE.github.io/"
+                target="_blank">
+
+                <img src="https://img.icons8.com/fluent/48/000000/twitter.png" alt="Twitter" />
+
+            </a>
+
+        </P>
+
+        <table align="center">
+            <tr>
+                <td>
+
+                    <a href="https://pradeep12nov2001.github.io/SEM3miniprojectLTCE.github.io/">
+
+                        <img border="0" alt="HOME" src="https://i.imgur.com/PW5Ccl0.png" height="300">
+
+                    </a>
+
+                    <a href="https://drive.google.com/file/d/1Hw91XA9c1CuLKp9PhAt1ujZ963ZsagEBf/view?usp=sharing">
+
+                        <img border="0" alt="ABOUT US" src="https://i.imgur.com/oZLxAI6.png" height="300">
+
+                    </a>
+                </td>
+
+            </tr>
+
+        </table>
+
+        <br>
+
+        <script type="text/javascript">
+
+            $(document).ready(function () {
+
+                $('[name="input_"]').click(function () {
+
+                    $('#input_num').val($(this).val());
+
+                    $('#input_value').val("");
+
+                    $('#output_value').val("");
+
+                });
+
+                $('[name="output_"]').click(function () {
+
+                    $('#output_num').val($(this).val());
+
+                    px(1);
+
+                });
+
+                $("#input_num").change(function () {
+
+                    $("#input_area input").removeAttr("checked");
+
+                    var val = $(this).val();
+
+                    $("#input_area input[value=" + val + "]").attr("checked", "checked");
+
+                    $('#input_value').val("");
+
+                    $('#output_value').val("");
+
+                });
+
+                $("#output_num").change(function () {
+
+                    $("#output_area input").removeAttr("checked");
+
+                    var val = $(this).val();
+
+                    $("#output_area input[value=" + val + "]").attr("checked", "checked");
+
+                    px(1);
+
+                });
+
+            });
+
+            function pxparseFloat(x, y) {
+
+                x = x.toString();
+
+                var num = x;
+
+                var data = num.split(".");
+
+                var you = data[1].split("");
+
+                var sum = 0;
+
+                for (var i = 0; i < data[1].length; i++) {
+
+                    sum += you[i] * Math.pow(y, -1 * (i + 1))
+
+                }
+
+                return parseInt(data[0], y) + sum;
+
+            }
+
+            function zhengze(x) {
+
+                var str;
+
+                x = parseInt(x);
+
+                if (x <= 10) {
+
+                    str = new RegExp("^[+\\-]?[0-" + (x - 1) + "]*[.]?[0-" + (x - 1) + "]*$", "gi");
+
+                } else {
+
+                    var letter = "";
+
+                    switch (x) {
+
+                        case 11: letter = "a"; break;
+
+                        case 12: letter = "b"; break;
+
+                        case 13: letter = "c"; break;
+
+                        case 14: letter = "d"; break;
+
+                        case 15: letter = "e"; break;
+
+                        case 16: letter = "f"; break;
+
+                        case 17: letter = "g"; break;
+
+                        case 18: letter = "h"; break;
+
+                        case 19: letter = "i"; break;
+
+                        case 20: letter = "j"; break;
+
+                        case 21: letter = "k"; break;
+
+                        case 22: letter = "l"; break;
+
+                        case 23: letter = "m"; break;
+
+                        case 24: letter = "n"; break;
+
+                        case 25: letter = "o"; break;
+
+                        case 26: letter = "p"; break;
+
+                        case 27: letter = "q"; break;
+
+                        case 28: letter = "r"; break;
+
+                        case 29: letter = "s"; break;
+
+                        case 30: letter = "t"; break;
+
+                        case 31: letter = "u"; break;
+
+                        case 32: letter = "v"; break;
+
+                        case 33: letter = "w"; break;
+
+                        case 34: letter = "x"; break;
+
+                        case 35: letter = "y"; break;
+
+                        case 36: letter = "z"; break;
+
+                    }
+
+                    str = new RegExp("^[+\\-]?[0-9a-" + letter + "]*[.]?[0-9a-" + letter + "]*$", "gi");
+
+                }
+
+                return str;
+
+            }
+
+            var n = 50;
+
+            var shurukuang = "";
+
+            var flag = "";
+
+            function px(y) {
+
+                if ($("#input_value").val() != flag || y) {
+
+                    flag = $("#input_value").val();
+
+                    if ($("#input_num").selectedIndex < n) {
+
+                        $("#input_value").val("");
+
+                        $("#output_value").val("");
+
+                    } else {
+
+                        var px00 = $("#input_value").val();
+
+                        var px0 = px00.match(zhengze($("#input_num").val()));
+
+                        if (px0) {
+
+                            if (px0[0].indexOf(".") == -1) {
+
+                                var px1 = parseInt(px0, $('#input_num').val());
+
+                            } else {
+
+                                var px1 = pxparseFloat(px0, $('#input_num').val());
+
+                            }
+
+                            px1 = px1.toString($('#output_num').val());
+
+                            $("#output_value").val(px1);
+
+                            shurukuang = px00;
+
+                        } else {
+
+                            $("#input_value").val(shurukuang);
+
+                        }
+
+                    }
+
+                    n = $("#input_num").selectedIndex;
+
+                }
+
+                if ($("#input_value").val() == "") {
+
+                    $("#output_value").val("");
+
+                }
+
+            }
+
+        </script>
+
+        <script type="text/javascript" src="https://www.easyunitconverter.com/js/jquery-3.5.1.min.js"></script>
+
+        <script type="text/javascript" src="https://www.easyunitconverter.com/js/jquery.autocomplete.js"></script>
+
+        <script type="text/javascript" async src="https://www.easyunitconverter.com/js/popper.min.js"></script>
+
+        <script type="text/javascript" async src="https://www.easyunitconverter.com/js/bootstrap.min.js"></script>
+
+        <script type="text/javascript" async src="https://www.easyunitconverter.com/js/unitconverter.min.js"></script>
+
+        <script type="text/javascript" async src="https://www.easyunitconverter.com/js/scripts.min.js"></script>
+
+        <script type=text/javascript src="https://www.easyunitconverter.com/js/socket.io.js"></script>
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161720880-1"></script>
+
+        <script type="text/javascript">
+
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() { dataLayer.push(arguments); }
+
+            gtag('js', new Date());
+
+            gtag('config', 'UA-161720880-1');
+
+        </script>
+
+    </body>
+
+</html>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
