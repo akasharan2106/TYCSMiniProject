@@ -178,14 +178,20 @@
 
         @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
 
-            .modal {
+                .modal {
 
-                -webkit-backdrop-filter: blur(50px);
+                /*-webkit-backdrop-filter: blur(50px);
 
                 backdrop-filter: blur(45px);
 
                 background: rgb(64, 64, 74);
                 background: linear-gradient(90deg, rgba(64, 64, 74, 1) 3%, rgba(203, 203, 205, 1) 56%, rgba(154, 221, 233, 1) 100%);
+           */
+           
+           background: #334d50;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #cbcaa5, #334d50);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #cbcaa5, #334d50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
             }
 
             .warning {
@@ -415,10 +421,9 @@
 
     </div>
 
-    <div id="fb-root"></div>
-
   <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/mr_IN/sdk.js#xfbml=1&version=v12.0" nonce="Bzt2m0NK"></script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v12.0" nonce="Ms4tUjD9"></script>
+    
     <body <br>
 
         <br>
@@ -851,8 +856,10 @@
             <div class="commentblur">
 
                 <div class="modal">
+                        
+                        <div class="fb-comments" data-href="https://akasharan2106.github.io/TYCSMiniProject/" data-numposts="5"  data-width="500" data-colorscheme="light"></div>
 
-                <div class="fb-comments" data-href="https://akasharan2106.github.io/TYCSMiniProject/" data-width="" data-numposts="6" data-width="500" data-colorscheme="light"></div>
+         
 
                 </div>
             </div>
